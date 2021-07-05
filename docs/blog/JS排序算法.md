@@ -18,46 +18,28 @@ tags: [Date Structure,JavaScript]
 
 ## 基础知识
 
-
-
 - **时间复杂度**: 可以简单理解为算法执行所耗费的时间,一般用大O符号来表示
 - **空间复杂度**: 运行完一个程序所需要内存的大小
 - **排序的稳定性**:排序后,两个相同的元素前后位置不做变动,则算法是稳定的
-
-
-
-常见算法的复杂度及稳定性(来源于网络
-
-![](https://hexo-1258429955.cos.ap-shanghai.myqcloud.com/img/20190317224857.png)
-
-
 
 交换操作的函数表达
 
 ```js
 function swap(ary,x,y){   //ary为数组 x,y为数字
-    if (x === y) return		//若相等不做操作
-    var temp = ary[x]		// 设置中间变量
-    ary[x] = ary[y]			//交换
+    if (x === y) return  //若相等不做操作
+    var temp = ary[x]  // 设置中间变量
+    ary[x] = ary[y]   //交换
     ary[y] = temp
 }
 ```
 
-
-
-
-
 ## 冒泡排序
 
-
-
-相信所有人刚开始学排序都是从冒泡排序开始的,两个循环就可搞定. 
+相信所有人刚开·始学排序都是从冒泡排序开始的,两个循环就可搞定.
 
 小循环比较相邻两位的大小,如果前大后小就进行交换
 
 大循环保证了排序的正确实现,通过大循环保证每次都会有一个在大循环内最大的数被移到大循环的最后部分
-
-
 
 ```js
         function bubbleSort1(ary){
@@ -72,10 +54,6 @@ function swap(ary,x,y){   //ary为数组 x,y为数字
             return ary
         }
 ```
-
-
-
-
 
 同样的如果在一次子循环中没有执行交换的话,可以适当的跳出大循环即可,这样可以设置标志位
 
@@ -99,15 +77,11 @@ function bubbleSort1(ary) {
         }
 ```
 
-
-
 ## 选择排序
 
 选择排序追求的是一次到位,元素在每次移动时就已经到达他在已排好序列中的最终位置.
 
 通过选择出最小的移出到有序区，再从无序区选择出最小的，如此类推。
-
-
 
 ```js
 function selectSort(ary) {
@@ -125,8 +99,6 @@ function selectSort(ary) {
             return ary
         }
 ```
-
-
 
 ## 插入排序
 
@@ -148,8 +120,6 @@ function insertionSort(arr) {
 }
 ```
 
-
-
 二分版本
 
 这个`reduce`有点坑的，网上看的他人的，大概意思是遍历ary元素，将ary的每个元素插入后面的[]空数组中。
@@ -166,8 +136,6 @@ function insertionSort(arr) {
 
         }
 ```
-
-
 
 ```js
         function insertSort(ary) {
@@ -213,15 +181,9 @@ function insertionSort(arr) {
         }
 ```
 
-
-
-
-
 ## 归并排序
 
 这个排序有点东西的，使用了分治的思想，将上面的二分法活学活用，具体来说就是递归的使用归并排序，其实就是再两两比较时能很快的得出谁在前谁在后，把这个两两给扩大了，序列逐步有序化
-
-
 
 ``` js
 function mergeSort(ary){
@@ -247,11 +209,7 @@ function mergeSort(ary){
             }
 ```
 
-
-
 ## 快速排序
-
-
 
 快排是很经典的排序了，思想也利用了分治的思想
 
@@ -260,10 +218,6 @@ function mergeSort(ary){
 - 将数组中分成两个串，所有比哨兵小的放前面，比哨兵大的放后面，再这个操作完成后这个哨兵就位于数列的中间位置，这个被称为分区（partition）操作。
 
 - 递归的把小于哨兵的子数列和大于哨兵的子数列进行排序。
-
-
-
-
 
 非递归版本
 
@@ -292,8 +246,6 @@ function quickSort(ary) {
   return quickSort1(left).concat(middle, quickSort(right))
 }
 ```
-
-
 
 递归版本
 
@@ -326,11 +278,6 @@ function partition(ary, comparator, start = 0, end = ary.length - 1, ) {
 
 ```
 
+## 参考
 
-
-
-
-## 参考：
-
-https://juejin.im/post/5c8532ec6fb9a049a42fdd81?utm_source=gold_browser_extension#heading-4
-
+<https://juejin.im/post/5c8532ec6fb9a049a42fdd81?utm_source=gold_browser_extension#heading-4>
