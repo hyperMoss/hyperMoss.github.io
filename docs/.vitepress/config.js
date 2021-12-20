@@ -34,7 +34,10 @@ function getBlogSidebar() {
   return [
     {
       text: "随笔",
-      children: [{ text: "我如何学习", link: "/blog/how-to-learn" }],
+      children: [
+        { text: "我如何学习", link: "/blog/how-to-learn" },
+        { text: "EGGJS配置Umi静态前端", link: "/blog/egg-assets-umi" }
+      ],
     },
     {
       text: "基础",
