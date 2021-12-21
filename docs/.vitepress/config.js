@@ -40,6 +40,12 @@ function getBlogSidebar() {
       ],
     },
     {
+      text: "源码阅读",
+      children: [
+        { text: "NPM包", link: "/blog/read-source-code" },
+      ],
+    },
+    {
       text: "基础",
       children: [
         { text: "JSintroduce1", link: "/blog/JSintroduce-1" },
