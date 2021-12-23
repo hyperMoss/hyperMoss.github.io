@@ -209,6 +209,9 @@ yarn build
 yarn start
 ```
 
+无论什么前端打包工具都需要注意入口和出口，例如webpack，rollup。
+不是跑通dev就是ok了的，更需要严重线上的部署问题
+
 ## 参考
 
 [examples/assets-with-umi at master · eggjs/examples (github.com)](https://github.com/eggjs/examples/tree/master/assets-with-umi)
