@@ -1,20 +1,4 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>源码阅读 | HyperMoss</title>
-    <meta name="description" content="Just playing.">
-    <link rel="stylesheet" href="/assets/style.019f39fc.css">
-    <link rel="modulepreload" href="/assets/Home.e0993260.js">
-    <link rel="modulepreload" href="/assets/app.6d5be813.js">
-    <link rel="modulepreload" href="/assets/blog_read-source-code.md.5a2c5699.lean.js">
-    
-    <meta name="twitter:title" content="源码阅读 | HyperMoss">
-    <meta property="og:title" content="源码阅读 | HyperMoss">
-  </head>
-  <body>
-    <div id="app"><!--[--><div class="theme"><header class="nav-bar" data-v-675d8756><div class="sidebar-button" data-v-675d8756><svg class="icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z" class></path></svg></div><a class="nav-bar-title" href="/" aria-label="HyperMoss, back to home" data-v-675d8756 data-v-4a583abe><!----> HyperMoss</a><div class="flex-grow" data-v-675d8756></div><div class="nav" data-v-675d8756><nav class="nav-links" data-v-675d8756 data-v-eab3edfe><!--[--><div class="item" data-v-eab3edfe><div class="nav-link" data-v-eab3edfe data-v-b8818f8c><a class="item" href="/" data-v-b8818f8c>首页 <!----></a></div></div><div class="item" data-v-eab3edfe><div class="nav-link" data-v-eab3edfe data-v-b8818f8c><a class="item" href="/blog/index" data-v-b8818f8c>博文 <!----></a></div></div><div class="item" data-v-eab3edfe><div class="nav-link" data-v-eab3edfe data-v-b8818f8c><a class="item isExternal" href="https://github.com/hyperMoss/hyperMoss.github.io" target="_blank" rel="noopener noreferrer" data-v-b8818f8c>Github <svg class="icon outbound" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15" data-v-b8818f8c><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div></div><!--]--><!----><!----></nav></div><!--[--><!--]--></header><aside class="sidebar" data-v-83e92a68><nav class="nav-links nav" data-v-83e92a68 data-v-eab3edfe><!--[--><div class="item" data-v-eab3edfe><div class="nav-link" data-v-eab3edfe data-v-b8818f8c><a class="item" href="/" data-v-b8818f8c>首页 <!----></a></div></div><div class="item" data-v-eab3edfe><div class="nav-link" data-v-eab3edfe data-v-b8818f8c><a class="item" href="/blog/index" data-v-b8818f8c>博文 <!----></a></div></div><div class="item" data-v-eab3edfe><div class="nav-link" data-v-eab3edfe data-v-b8818f8c><a class="item isExternal" href="https://github.com/hyperMoss/hyperMoss.github.io" target="_blank" rel="noopener noreferrer" data-v-b8818f8c>Github <svg class="icon outbound" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15" data-v-b8818f8c><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div></div><!--]--><!----><!----></nav><!--[--><!--]--><ul class="sidebar-links" data-v-83e92a68><!--[--><li class="sidebar-link"><p class="sidebar-link-item">随笔</p><ul class="sidebar-links"><li class="sidebar-link"><a class="sidebar-link-item" href="/blog/how-to-learn">我如何学习</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="/blog/egg-assets-umi">EGGJS配置Umi静态前端</a><!----></li></ul></li><li class="sidebar-link"><p class="sidebar-link-item">源码阅读</p><ul class="sidebar-links"><li class="sidebar-link"><a class="sidebar-link-item active" href="/blog/read-source-code">NPM包</a><ul class="sidebar-links"><li class="sidebar-link"><a class="sidebar-link-item" href="#validate-npm-package-name">validate-npm-package-name</a><ul class="sidebar-links"><li class="sidebar-link"><a class="sidebar-link-item" href="#功能">功能</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="#代码风格">代码风格</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="#收获">收获</a><!----></li></ul></li><li class="sidebar-link"><a class="sidebar-link-item" href="#axios-工具函数">axios 工具函数</a><ul class="sidebar-links"><li class="sidebar-link"><a class="sidebar-link-item" href="#收获-1">收获</a><!----></li></ul></li></ul></li></ul></li><li class="sidebar-link"><p class="sidebar-link-item">基础</p><ul class="sidebar-links"><li class="sidebar-link"><a class="sidebar-link-item" href="/blog/JSintroduce-1">JSintroduce1</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="/blog/JSintroduce-2">JSintroduce2</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="/blog/JSintroduce-3">JSintroduce3</a><!----></li></ul></li><li class="sidebar-link"><p class="sidebar-link-item">面试题</p><ul class="sidebar-links"><li class="sidebar-link"><a class="sidebar-link-item" href="/blog/interview1">校招面试题1</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="/blog/interview2">校招面试题2</a><!----></li></ul></li><li class="sidebar-link"><p class="sidebar-link-item">读书笔记</p><ul class="sidebar-links"><li class="sidebar-link"><a class="sidebar-link-item" href="/blog/Learning-how-to-learn-part1">学习如何学习1</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="/blog/Learning-how-to-learn-part2">学习如何学习2</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="/blog/Learning-how-to-learn-part3">学习如何学习3</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="/blog/Learning-how-to-learn-part4">学习如何学习4</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="/blog/dsday1">数据结构学习1</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="/blog/dsday2">数据结构学习2</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="/blog/dsday3">数据结构学习3</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="/blog/dsday4">数据结构学习4</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="/blog/dsday5">数据结构学习5</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="/blog/dsday6">数据结构学习6</a><!----></li></ul></li><!--]--></ul><!--[--><!--]--></aside><div class="sidebar-mask"></div><main class="page" data-v-7eddb2c4><div class="container" data-v-7eddb2c4><!--[--><!--]--><div style="position:relative;" class="content" data-v-7eddb2c4><div><p>阅读源码的记录地</p><h2 id="validate-npm-package-name" tabindex="-1">validate-npm-package-name <a class="header-anchor" href="#validate-npm-package-name" aria-hidden="true">#</a></h2><h3 id="功能" tabindex="-1">功能 <a class="header-anchor" href="#功能" aria-hidden="true">#</a></h3><p>Give me a string and I&#39;ll tell you if it&#39;s a valid <code>npm</code> package name.</p><p>本质是判断一个字符串能否作为包名</p><h3 id="代码风格" tabindex="-1">代码风格 <a class="header-anchor" href="#代码风格" aria-hidden="true">#</a></h3><p>首先把正则常量与blacklist放在头部,这与日常编码来说没有区别</p><p>然后是主函数validate,接受一个名字,并根据情况,返回一个对象包含另一个纯函数 处理过<code>warnings</code>,和<code>errors</code> ,这两个列表用来区分是validForOldPackages和validForNewPackages,</p><div class="language-js"><pre><code><span class="token keyword">var</span> <span class="token function-variable function">done</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">warnings<span class="token punctuation">,</span> errors</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+import{_ as n,c as a,o as s,a as t}from"./app.6d5be813.js";const m='{"title":"\u6E90\u7801\u9605\u8BFB","description":"","frontmatter":{"title":"\u6E90\u7801\u9605\u8BFB","date":"2019-01-06 14:02:11"},"headers":[{"level":2,"title":"validate-npm-package-name","slug":"validate-npm-package-name"},{"level":3,"title":"\u529F\u80FD","slug":"\u529F\u80FD"},{"level":3,"title":"\u4EE3\u7801\u98CE\u683C","slug":"\u4EE3\u7801\u98CE\u683C"},{"level":3,"title":"\u6536\u83B7","slug":"\u6536\u83B7"},{"level":2,"title":"axios \u5DE5\u5177\u51FD\u6570","slug":"axios-\u5DE5\u5177\u51FD\u6570"},{"level":3,"title":"\u6536\u83B7","slug":"\u6536\u83B7-1"}],"relativePath":"blog/read-source-code.md","lastUpdated":1640275127487}',p={},o=t(`<p>\u9605\u8BFB\u6E90\u7801\u7684\u8BB0\u5F55\u5730</p><h2 id="validate-npm-package-name" tabindex="-1">validate-npm-package-name <a class="header-anchor" href="#validate-npm-package-name" aria-hidden="true">#</a></h2><h3 id="\u529F\u80FD" tabindex="-1">\u529F\u80FD <a class="header-anchor" href="#\u529F\u80FD" aria-hidden="true">#</a></h3><p>Give me a string and I&#39;ll tell you if it&#39;s a valid <code>npm</code> package name.</p><p>\u672C\u8D28\u662F\u5224\u65AD\u4E00\u4E2A\u5B57\u7B26\u4E32\u80FD\u5426\u4F5C\u4E3A\u5305\u540D</p><h3 id="\u4EE3\u7801\u98CE\u683C" tabindex="-1">\u4EE3\u7801\u98CE\u683C <a class="header-anchor" href="#\u4EE3\u7801\u98CE\u683C" aria-hidden="true">#</a></h3><p>\u9996\u5148\u628A\u6B63\u5219\u5E38\u91CF\u4E0Eblacklist\u653E\u5728\u5934\u90E8,\u8FD9\u4E0E\u65E5\u5E38\u7F16\u7801\u6765\u8BF4\u6CA1\u6709\u533A\u522B</p><p>\u7136\u540E\u662F\u4E3B\u51FD\u6570validate,\u63A5\u53D7\u4E00\u4E2A\u540D\u5B57,\u5E76\u6839\u636E\u60C5\u51B5,\u8FD4\u56DE\u4E00\u4E2A\u5BF9\u8C61\u5305\u542B\u53E6\u4E00\u4E2A\u7EAF\u51FD\u6570 \u5904\u7406\u8FC7<code>warnings</code>,\u548C<code>errors</code> ,\u8FD9\u4E24\u4E2A\u5217\u8868\u7528\u6765\u533A\u5206\u662FvalidForOldPackages\u548CvalidForNewPackages,</p><div class="language-js"><pre><code><span class="token keyword">var</span> <span class="token function-variable function">done</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">warnings<span class="token punctuation">,</span> errors</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">var</span> result <span class="token operator">=</span> <span class="token punctuation">{</span>
     validForNewPackages<span class="token operator">:</span> errors<span class="token punctuation">.</span>length <span class="token operator">===</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> warnings<span class="token punctuation">.</span>length <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">,</span>
     validForOldPackages<span class="token operator">:</span> errors<span class="token punctuation">.</span>length <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">,</span>
@@ -25,14 +9,14 @@
   <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>result<span class="token punctuation">.</span>errors<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token keyword">delete</span> result<span class="token punctuation">.</span>errors
   <span class="token keyword">return</span> result
 <span class="token punctuation">}</span>
-</code></pre></div><p>感觉其他eslint的规则解析应该也差不多是这种设计,两个数组<code>warnings</code>,和<code>errors</code></p><p>然后是主函数,头部定义两个数组</p><div class="language-js"><pre><code>  <span class="token keyword">var</span> warnings <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+</code></pre></div><p>\u611F\u89C9\u5176\u4ED6eslint\u7684\u89C4\u5219\u89E3\u6790\u5E94\u8BE5\u4E5F\u5DEE\u4E0D\u591A\u662F\u8FD9\u79CD\u8BBE\u8BA1,\u4E24\u4E2A\u6570\u7EC4<code>warnings</code>,\u548C<code>errors</code></p><p>\u7136\u540E\u662F\u4E3B\u51FD\u6570,\u5934\u90E8\u5B9A\u4E49\u4E24\u4E2A\u6570\u7EC4</p><div class="language-js"><pre><code>  <span class="token keyword">var</span> warnings <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
   <span class="token keyword">var</span> errors <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
-</code></pre></div><p>然后卫语句,尽快返回,如果遇到<code>error</code>便提前处理,抛出done处理过的东西.</p><div class="language-js"><pre><code>
+</code></pre></div><p>\u7136\u540E\u536B\u8BED\u53E5,\u5C3D\u5FEB\u8FD4\u56DE,\u5982\u679C\u9047\u5230<code>error</code>\u4FBF\u63D0\u524D\u5904\u7406,\u629B\u51FAdone\u5904\u7406\u8FC7\u7684\u4E1C\u897F.</p><div class="language-js"><pre><code>
   <span class="token keyword">if</span> <span class="token punctuation">(</span>name <span class="token operator">===</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     errors<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token string">&#39;name cannot be null&#39;</span><span class="token punctuation">)</span>
     <span class="token keyword">return</span> <span class="token function">done</span><span class="token punctuation">(</span>warnings<span class="token punctuation">,</span> errors<span class="token punctuation">)</span>
   <span class="token punctuation">}</span>
-</code></pre></div><p>先是errors后是warring,遇到问题便push进数组</p><p>最后抛出scopedPackagePattern,是不是意味着能在外部变更这个正则呢?去匹配那种用户名和包名用<code>/</code>的情况</p><h3 id="收获" tabindex="-1">收获 <a class="header-anchor" href="#收获" aria-hidden="true">#</a></h3><ul><li>常量变量名顶置</li><li>校验时,可以分为<code>errors</code>和<code>warings</code>,</li><li><code>warings</code>信息可以塞入数组中,不影响主流程进行,<code>errors</code>则提前抛出</li><li>处理结果整合数据的函数可独立出主函数之中,两个纯函数解耦合,更合理</li></ul><h2 id="axios-工具函数" tabindex="-1">axios 工具函数 <a class="header-anchor" href="#axios-工具函数" aria-hidden="true">#</a></h2><div class="language-js"><pre><code><span class="token string">&#39;use strict&#39;</span><span class="token punctuation">;</span>
+</code></pre></div><p>\u5148\u662Ferrors\u540E\u662Fwarring,\u9047\u5230\u95EE\u9898\u4FBFpush\u8FDB\u6570\u7EC4</p><p>\u6700\u540E\u629B\u51FAscopedPackagePattern,\u662F\u4E0D\u662F\u610F\u5473\u7740\u80FD\u5728\u5916\u90E8\u53D8\u66F4\u8FD9\u4E2A\u6B63\u5219\u5462?\u53BB\u5339\u914D\u90A3\u79CD\u7528\u6237\u540D\u548C\u5305\u540D\u7528<code>/</code>\u7684\u60C5\u51B5</p><h3 id="\u6536\u83B7" tabindex="-1">\u6536\u83B7 <a class="header-anchor" href="#\u6536\u83B7" aria-hidden="true">#</a></h3><ul><li>\u5E38\u91CF\u53D8\u91CF\u540D\u9876\u7F6E</li><li>\u6821\u9A8C\u65F6,\u53EF\u4EE5\u5206\u4E3A<code>errors</code>\u548C<code>warings</code>,</li><li><code>warings</code>\u4FE1\u606F\u53EF\u4EE5\u585E\u5165\u6570\u7EC4\u4E2D,\u4E0D\u5F71\u54CD\u4E3B\u6D41\u7A0B\u8FDB\u884C,<code>errors</code>\u5219\u63D0\u524D\u629B\u51FA</li><li>\u5904\u7406\u7ED3\u679C\u6574\u5408\u6570\u636E\u7684\u51FD\u6570\u53EF\u72EC\u7ACB\u51FA\u4E3B\u51FD\u6570\u4E4B\u4E2D,\u4E24\u4E2A\u7EAF\u51FD\u6570\u89E3\u8026\u5408,\u66F4\u5408\u7406</li></ul><h2 id="axios-\u5DE5\u5177\u51FD\u6570" tabindex="-1">axios \u5DE5\u5177\u51FD\u6570 <a class="header-anchor" href="#axios-\u5DE5\u5177\u51FD\u6570" aria-hidden="true">#</a></h2><div class="language-js"><pre><code><span class="token string">&#39;use strict&#39;</span><span class="token punctuation">;</span>
 
 <span class="token keyword">var</span> bind <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&#39;./helpers/bind&#39;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
@@ -46,7 +30,7 @@
  * @param {Object} val The value to test
  * @returns {boolean} True if value is an Array, otherwise false
  */</span>
-<span class="token comment">// 通过toString获取对象类型，然后判断是否为数组</span>
+<span class="token comment">// \u901A\u8FC7toString\u83B7\u53D6\u5BF9\u8C61\u7C7B\u578B\uFF0C\u7136\u540E\u5224\u65AD\u662F\u5426\u4E3A\u6570\u7EC4</span>
 <span class="token keyword">function</span> <span class="token function">isArray</span><span class="token punctuation">(</span><span class="token parameter">val</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">return</span> <span class="token function">toString</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token string">&#39;[object Array]&#39;</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
@@ -57,7 +41,7 @@
  * @param {Object} val The value to test
  * @returns {boolean} True if the value is undefined, otherwise false
  */</span>
-<span class="token comment">// 直接用typeof判断,说起来算是利用了null的缺陷</span>
+<span class="token comment">// \u76F4\u63A5\u7528typeof\u5224\u65AD,\u8BF4\u8D77\u6765\u7B97\u662F\u5229\u7528\u4E86null\u7684\u7F3A\u9677</span>
 <span class="token keyword">function</span> <span class="token function">isUndefined</span><span class="token punctuation">(</span><span class="token parameter">val</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">return</span> <span class="token keyword">typeof</span> val <span class="token operator">===</span> <span class="token string">&#39;undefined&#39;</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
@@ -68,8 +52,8 @@
  * @param {Object} val The value to test
  * @returns {boolean} True if value is a Buffer, otherwise false
  */</span>
-<span class="token comment">// 先判断是否为null和underfined，然后判断是否存在val构造函数，Buffer本身是个类</span>
-<span class="token comment">// 然后用自己的isBuffer方法判断</span>
+<span class="token comment">// \u5148\u5224\u65AD\u662F\u5426\u4E3Anull\u548Cunderfined\uFF0C\u7136\u540E\u5224\u65AD\u662F\u5426\u5B58\u5728val\u6784\u9020\u51FD\u6570\uFF0CBuffer\u672C\u8EAB\u662F\u4E2A\u7C7B</span>
+<span class="token comment">// \u7136\u540E\u7528\u81EA\u5DF1\u7684isBuffer\u65B9\u6CD5\u5224\u65AD</span>
 <span class="token keyword">function</span> <span class="token function">isBuffer</span><span class="token punctuation">(</span><span class="token parameter">val</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">return</span> val <span class="token operator">!==</span> <span class="token keyword">null</span> <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span><span class="token function">isUndefined</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> val<span class="token punctuation">.</span>constructor <span class="token operator">!==</span> <span class="token keyword">null</span> <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span><span class="token function">isUndefined</span><span class="token punctuation">(</span>val<span class="token punctuation">.</span>constructor<span class="token punctuation">)</span>
     <span class="token operator">&amp;&amp;</span> <span class="token keyword">typeof</span> val<span class="token punctuation">.</span>constructor<span class="token punctuation">.</span>isBuffer <span class="token operator">===</span> <span class="token string">&#39;function&#39;</span> <span class="token operator">&amp;&amp;</span> val<span class="token punctuation">.</span>constructor<span class="token punctuation">.</span><span class="token function">isBuffer</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -81,7 +65,7 @@
  * @param {Object} val The value to test
  * @returns {boolean} True if value is an ArrayBuffer, otherwise false
  */</span>
-<span class="token comment">// toString方法直接判断</span>
+<span class="token comment">// toString\u65B9\u6CD5\u76F4\u63A5\u5224\u65AD</span>
 <span class="token keyword">function</span> <span class="token function">isArrayBuffer</span><span class="token punctuation">(</span><span class="token parameter">val</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">return</span> <span class="token function">toString</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token string">&#39;[object ArrayBuffer]&#39;</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
@@ -92,7 +76,7 @@
  * @param {Object} val The value to test
  * @returns {boolean} True if value is an FormData, otherwise false
  */</span>
-<span class="token comment">// instanceof 运算符判断 是否是由FormData构造函数创建的对象：当前对象的构造函数是的prototype属性指向的是FormData吗</span>
+<span class="token comment">// instanceof \u8FD0\u7B97\u7B26\u5224\u65AD \u662F\u5426\u662F\u7531FormData\u6784\u9020\u51FD\u6570\u521B\u5EFA\u7684\u5BF9\u8C61\uFF1A\u5F53\u524D\u5BF9\u8C61\u7684\u6784\u9020\u51FD\u6570\u662F\u7684prototype\u5C5E\u6027\u6307\u5411\u7684\u662FFormData\u5417</span>
 <span class="token keyword">function</span> <span class="token function">isFormData</span><span class="token punctuation">(</span><span class="token parameter">val</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> FormData <span class="token operator">!==</span> <span class="token string">&#39;undefined&#39;</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>val <span class="token keyword">instanceof</span> <span class="token class-name">FormData</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
@@ -113,7 +97,7 @@
   <span class="token keyword">return</span> result<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
-<span class="token comment">// 简单类型可以直接用typeof判断除了null和undefined</span>
+<span class="token comment">// \u7B80\u5355\u7C7B\u578B\u53EF\u4EE5\u76F4\u63A5\u7528typeof\u5224\u65AD\u9664\u4E86null\u548Cundefined</span>
 <span class="token comment">/**
  * Determine if a value is a String
  *
@@ -140,7 +124,7 @@
  * @param {Object} val The value to test
  * @returns {boolean} True if value is an Object, otherwise false
  */</span>
-<span class="token comment">// 排除null</span>
+<span class="token comment">// \u6392\u9664null</span>
 <span class="token keyword">function</span> <span class="token function">isObject</span><span class="token punctuation">(</span><span class="token parameter">val</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">return</span> val <span class="token operator">!==</span> <span class="token keyword">null</span> <span class="token operator">&amp;&amp;</span> <span class="token keyword">typeof</span> val <span class="token operator">===</span> <span class="token string">&#39;object&#39;</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
@@ -151,7 +135,7 @@
  * @param {Object} val The value to test
  * @return {boolean} True if value is a plain Object, otherwise false
  */</span>
-<span class="token comment">// 判断是否为纯对象，是用系统方法构造的对象 {} 或者 new Object()</span>
+<span class="token comment">// \u5224\u65AD\u662F\u5426\u4E3A\u7EAF\u5BF9\u8C61\uFF0C\u662F\u7528\u7CFB\u7EDF\u65B9\u6CD5\u6784\u9020\u7684\u5BF9\u8C61 {} \u6216\u8005 new Object()</span>
 <span class="token keyword">function</span> <span class="token function">isPlainObject</span><span class="token punctuation">(</span><span class="token parameter">val</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">toString</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span> <span class="token operator">!==</span> <span class="token string">&#39;[object Object]&#39;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
@@ -190,8 +174,8 @@
 <span class="token keyword">function</span> <span class="token function">isBlob</span><span class="token punctuation">(</span><span class="token parameter">val</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">return</span> <span class="token function">toString</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token string">&#39;[object Blob]&#39;</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-<span class="token comment">// Blob 对象表示一个不可变、原始数据的类文件对象。它的数据可以按文本或二进制的格式进行读取。</span>
-<span class="token comment">// 多用于转码</span>
+<span class="token comment">// Blob \u5BF9\u8C61\u8868\u793A\u4E00\u4E2A\u4E0D\u53EF\u53D8\u3001\u539F\u59CB\u6570\u636E\u7684\u7C7B\u6587\u4EF6\u5BF9\u8C61\u3002\u5B83\u7684\u6570\u636E\u53EF\u4EE5\u6309\u6587\u672C\u6216\u4E8C\u8FDB\u5236\u7684\u683C\u5F0F\u8FDB\u884C\u8BFB\u53D6\u3002</span>
+<span class="token comment">// \u591A\u7528\u4E8E\u8F6C\u7801</span>
 
 <span class="token comment">/**
  * Determine if a value is a Function
@@ -219,7 +203,7 @@
  * @param {Object} val The value to test
  * @returns {boolean} True if value is a URLSearchParams object, otherwise false
  */</span>
-<span class="token comment">// 一个处理URL查询字符串的对象</span>
+<span class="token comment">// \u4E00\u4E2A\u5904\u7406URL\u67E5\u8BE2\u5B57\u7B26\u4E32\u7684\u5BF9\u8C61</span>
 <span class="token keyword">function</span> <span class="token function">isURLSearchParams</span><span class="token punctuation">(</span><span class="token parameter">val</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">return</span> <span class="token keyword">typeof</span> URLSearchParams <span class="token operator">!==</span> <span class="token string">&#39;undefined&#39;</span> <span class="token operator">&amp;&amp;</span> val <span class="token keyword">instanceof</span> <span class="token class-name">URLSearchParams</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
@@ -230,9 +214,9 @@
  * @param {String} str The String to trim
  * @returns {String} The String freed of excess whitespace
  */</span>
-<span class="token comment">// 降级使用trim方法</span>
+<span class="token comment">// \u964D\u7EA7\u4F7F\u7528trim\u65B9\u6CD5</span>
 <span class="token keyword">function</span> <span class="token function">trim</span><span class="token punctuation">(</span><span class="token parameter">str</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token keyword">return</span> str<span class="token punctuation">.</span>trim <span class="token operator">?</span> str<span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">:</span> str<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">^\s+|\s+$</span><span class="token regex-delimiter">/</span><span class="token regex-flags">g</span></span><span class="token punctuation">,</span> <span class="token string">&#39;&#39;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> str<span class="token punctuation">.</span>trim <span class="token operator">?</span> str<span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">:</span> str<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">^\\s+|\\s+$</span><span class="token regex-delimiter">/</span><span class="token regex-flags">g</span></span><span class="token punctuation">,</span> <span class="token string">&#39;&#39;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
 <span class="token comment">/**
@@ -250,7 +234,7 @@
  * nativescript
  *  navigator.product -&gt; &#39;NativeScript&#39; or &#39;NS&#39;
  */</span>
-<span class="token comment">// 判断是否是浏览器环境</span>
+<span class="token comment">// \u5224\u65AD\u662F\u5426\u662F\u6D4F\u89C8\u5668\u73AF\u5883</span>
 <span class="token keyword">function</span> <span class="token function">isStandardBrowserEnv</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> navigator <span class="token operator">!==</span> <span class="token string">&#39;undefined&#39;</span> <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>navigator<span class="token punctuation">.</span>product <span class="token operator">===</span> <span class="token string">&#39;ReactNative&#39;</span> <span class="token operator">||</span>
                                            navigator<span class="token punctuation">.</span>product <span class="token operator">===</span> <span class="token string">&#39;NativeScript&#39;</span> <span class="token operator">||</span>
@@ -266,7 +250,7 @@
 <span class="token comment">/**
  * Iterate over an Array or an Object invoking a function for each item.
  *
- * If `obj` is an Array callback will be called passing
+ * If \`obj\` is an Array callback will be called passing
  * the value, index, and complete array for each item.
  *
  * If &#39;obj&#39; is an Object callback will be called passing
@@ -275,7 +259,7 @@
  * @param {Object|Array} obj The object to iterate
  * @param {Function} fn The callback to invoke for each item
  */</span>
-<span class="token comment">// Array.foreach的实现</span>
+<span class="token comment">// Array.foreach\u7684\u5B9E\u73B0</span>
 <span class="token keyword">function</span> <span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">obj<span class="token punctuation">,</span> fn</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token comment">// Don&#39;t bother if no value provided</span>
   <span class="token keyword">if</span> <span class="token punctuation">(</span>obj <span class="token operator">===</span> <span class="token keyword">null</span> <span class="token operator">||</span> <span class="token keyword">typeof</span> obj <span class="token operator">===</span> <span class="token string">&#39;undefined&#39;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -312,15 +296,15 @@
  *
  * Example:
  *
- * ```js
+ * \`\`\`js
  * var result = merge({foo: 123}, {foo: 456});
  * console.log(result.foo); // outputs 456
- * ```
+ * \`\`\`
  *
  * @param {Object} obj1 Object to merge
  * @returns {Object} Result of all merge properties
  */</span>
-<span class="token comment">// 合并多个对象，objec.assign的实现</span>
+<span class="token comment">// \u5408\u5E76\u591A\u4E2A\u5BF9\u8C61\uFF0Cobjec.assign\u7684\u5B9E\u73B0</span>
 <span class="token keyword">function</span> <span class="token function">merge</span><span class="token punctuation">(</span><span class="token comment">/* obj1, obj2, obj3, ... */</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">var</span> result <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
   <span class="token keyword">function</span> <span class="token function">assignValue</span><span class="token punctuation">(</span><span class="token parameter">val<span class="token punctuation">,</span> key</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -366,7 +350,7 @@
  * @param {string} content with BOM
  * @return {string} content value without BOM
  */</span>
-<span class="token comment">// 删除UTF-8的BOM，位于文本的开头</span>
+<span class="token comment">// \u5220\u9664UTF-8\u7684BOM\uFF0C\u4F4D\u4E8E\u6587\u672C\u7684\u5F00\u5934</span>
 <span class="token keyword">function</span> <span class="token function">stripBOM</span><span class="token punctuation">(</span><span class="token parameter">content</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">if</span> <span class="token punctuation">(</span>content<span class="token punctuation">.</span><span class="token function">charCodeAt</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token number">0xFEFF</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     content <span class="token operator">=</span> content<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -399,9 +383,4 @@ module<span class="token punctuation">.</span>exports <span class="token operato
   stripBOM<span class="token operator">:</span> stripBOM
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-</code></pre></div><h3 id="收获-1" tabindex="-1">收获 <a class="header-anchor" href="#收获-1" aria-hidden="true">#</a></h3><ul><li>buffer 缓冲区 <ul><li>Buffer 对象用于表示固定长度的字节序列。 许多 Node.js API 都支持 Buffer。</li><li>一个二进制数据缓存区，可以用来存储二进制数据。</li></ul></li><li>Blob 对象表示一个不可变、原始数据的类文件对象。它的数据可以按文本或二进制的格式进行读取。</li><li>部分基础函数的封装</li><li>BOM这个奇怪的东西</li><li>JS中部分可以直接类型判断的类型</li></ul></div></div><footer class="page-footer" data-v-7eddb2c4 data-v-fb8d84c6><div class="edit" data-v-fb8d84c6><div class="edit-link" data-v-fb8d84c6 data-v-1ed99556><!----></div></div><div class="updated" data-v-fb8d84c6><p class="last-updated" data-v-fb8d84c6 data-v-5797b537><span class="prefix" data-v-5797b537>最近更新:</span><span class="datetime" data-v-5797b537></span></p></div></footer><div class="next-and-prev-link" data-v-7eddb2c4 data-v-38ede35f><div class="container" data-v-38ede35f><div class="prev" data-v-38ede35f><a class="link" href="/blog/egg-assets-umi" data-v-38ede35f><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" class="icon icon-prev" data-v-38ede35f><path d="M19,11H7.4l5.3-5.3c0.4-0.4,0.4-1,0-1.4s-1-0.4-1.4,0l-7,7c-0.1,0.1-0.2,0.2-0.2,0.3c-0.1,0.2-0.1,0.5,0,0.8c0.1,0.1,0.1,0.2,0.2,0.3l7,7c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3c0.4-0.4,0.4-1,0-1.4L7.4,13H19c0.6,0,1-0.4,1-1S19.6,11,19,11z"></path></svg><span class="text" data-v-38ede35f>EGGJS配置Umi静态前端</span></a></div><div class="next" data-v-38ede35f><a class="link" href="/blog/JSintroduce-1" data-v-38ede35f><span class="text" data-v-38ede35f>JSintroduce1</span><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" class="icon icon-next" data-v-38ede35f><path d="M19.9,12.4c0.1-0.2,0.1-0.5,0-0.8c-0.1-0.1-0.1-0.2-0.2-0.3l-7-7c-0.4-0.4-1-0.4-1.4,0s-0.4,1,0,1.4l5.3,5.3H5c-0.6,0-1,0.4-1,1s0.4,1,1,1h11.6l-5.3,5.3c-0.4,0.4-0.4,1,0,1.4c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3l7-7C19.8,12.6,19.9,12.5,19.9,12.4z"></path></svg></a></div></div></div><!--[--><!--]--></div></main></div><!----><!--]--></div>
-    <script>__VP_HASH_MAP__ = JSON.parse("{\"blog_jsintroduce-1.md\":\"4d925e90\",\"blog_jsintroduce-2.md\":\"3e83c482\",\"blog_jsintroduce-3.md\":\"d39b212a\",\"blog_js排序算法.md\":\"a9502f51\",\"blog_learning-how-to-learn-part1.md\":\"9cbb1f63\",\"blog_learning-how-to-learn-part2.md\":\"9f6aec9b\",\"blog_learning-how-to-learn-part3.md\":\"fce2da56\",\"blog_learning-how-to-learn-part4.md\":\"f5b68eb3\",\"blog_dsday1.md\":\"ce3425a1\",\"blog_dsday2.md\":\"eb2ba7ad\",\"blog_dsday3.md\":\"4435a3be\",\"blog_dsday4.md\":\"634e9168\",\"blog_dsday5.md\":\"b3fd6d61\",\"blog_dsday6.md\":\"c77a9c8a\",\"blog_egg-assets-umi.md\":\"4d1d4f3b\",\"blog_how-to-learn.md\":\"49d93f95\",\"blog_index.md\":\"d948a380\",\"blog_interview1.md\":\"992798e5\",\"blog_interview2.md\":\"a4b8b5f7\",\"blog_read-source-code.md\":\"5a2c5699\",\"index.md\":\"da738bad\"}")</script>
-    <script type="module" async src="/assets/app.6d5be813.js"></script>
-    
-  </body>
-</html>
+</code></pre></div><h3 id="\u6536\u83B7-1" tabindex="-1">\u6536\u83B7 <a class="header-anchor" href="#\u6536\u83B7-1" aria-hidden="true">#</a></h3><ul><li>buffer \u7F13\u51B2\u533A <ul><li>Buffer \u5BF9\u8C61\u7528\u4E8E\u8868\u793A\u56FA\u5B9A\u957F\u5EA6\u7684\u5B57\u8282\u5E8F\u5217\u3002 \u8BB8\u591A Node.js API \u90FD\u652F\u6301 Buffer\u3002</li><li>\u4E00\u4E2A\u4E8C\u8FDB\u5236\u6570\u636E\u7F13\u5B58\u533A\uFF0C\u53EF\u4EE5\u7528\u6765\u5B58\u50A8\u4E8C\u8FDB\u5236\u6570\u636E\u3002</li></ul></li><li>Blob \u5BF9\u8C61\u8868\u793A\u4E00\u4E2A\u4E0D\u53EF\u53D8\u3001\u539F\u59CB\u6570\u636E\u7684\u7C7B\u6587\u4EF6\u5BF9\u8C61\u3002\u5B83\u7684\u6570\u636E\u53EF\u4EE5\u6309\u6587\u672C\u6216\u4E8C\u8FDB\u5236\u7684\u683C\u5F0F\u8FDB\u884C\u8BFB\u53D6\u3002</li><li>\u90E8\u5206\u57FA\u7840\u51FD\u6570\u7684\u5C01\u88C5</li><li>BOM\u8FD9\u4E2A\u5947\u602A\u7684\u4E1C\u897F</li><li>JS\u4E2D\u90E8\u5206\u53EF\u4EE5\u76F4\u63A5\u7C7B\u578B\u5224\u65AD\u7684\u7C7B\u578B</li></ul>`,22),e=[o];function c(l,u,r,i,k,f){return s(),a("div",null,e)}var y=n(p,[["render",c]]);export{m as __pageData,y as default};
