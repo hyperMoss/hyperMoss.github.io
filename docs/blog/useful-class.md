@@ -134,14 +134,14 @@ class Scheduler {
 
   add(promiseMaker) {
     if (this.executorList.length < this.maxExecutorNum) {
-      this.executorList.push(promiseMaker);
+      this.run(promiseMaker);
     } else {
       this.waitList.push(promiseMaker);
     }
   }
 
   run(promiseMaker) {
-    const len = this.executorList.length;
+    const len = this.executorList.push(promiseMaker);
     const index = len - 1;
     promiseMaker().then(() => {
       this.executorList.splice(index, 1);
