@@ -59,7 +59,8 @@ function getBlogSidebar() {
       children: [
         { text: "校招面试题1", link: "/blog/interview1" },
         { text: "校招面试题2", link: "/blog/interview2" },
-        { text: "常见的设计模式", link: "/blog/useful-class" }
+        { text: "常见的设计模式", link: "/blog/useful-class" },
+        { text: "虾皮market一面", link: "/blog/shopee1" }
       ],
     },
     {
