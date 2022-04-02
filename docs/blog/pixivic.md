@@ -1,9 +1,14 @@
+---
+title: Pixivic架构
+date: '2022-04-1 22:02:11'
+---
 
 # Pixivic架构
 
 ## 主网站
 
 [https://pixivic.com/](https://pixivic.com/)
+
 [hyperMoss/pixivic-pc: ✨pixivic.com power by vue (github.com)](https://github.com/hyperMoss/pixivic-pc)
 
 ### 流畅的虚拟列表
