@@ -6,11 +6,16 @@ date: '2022-04-2 14:02:11'
 
 ## 变量提升
 
+```js
 foo()
-var foo= function(){}
+var foo = function(){}
+```
+
+这个是会报错的
 
 ## 作用域
 
+```js
 var n = 1;
 
 (function foo(){
@@ -19,10 +24,11 @@ var n = 1;
 }())
 
 console.log(n)
+```
 
 ## instanceof 实现
 
-object.__proto__ === Object.prototype
+`object.__proto__ === Object.prototype`
 
 ```js
 function _instanceof(L,R){
@@ -38,13 +44,14 @@ function _instanceof(L,R){
 
 ## http2.0 http3.0
 
-多路复用
-长连接
-头部压缩
+http2.0基于http1.1，保持了长连接和
+
+http3.0 即QUIC
+基于UDP协议
 
 ## 异步
 
-__能否正常运行，点击事件能正常处理吗？__
+以下代码能否正常运行，点击事件能正常处理吗？
 
 ```js
 function foo(){
@@ -52,6 +59,8 @@ function foo(){
 }
 foo()
 ```
+
+## 事件循环
 
 ```js
 setTimeout(()=>{
@@ -93,7 +102,7 @@ JSX将代码编译为`React.createElement()`形式，所有需要引入React
 
 ## ESM和CJS区别，为什么ESM可以tree sharking
 
-ESM异步在那？应该是知道我答错了，但是我没有反应过来。应该回答的是ESM不能动态加载，而是需要编译时加载，所以可以做tree sharking
+应该回答的是ESM不能动态加载，而是需要编译时加载，所以可以做tree sharking
 
 ## js垃圾回收机制
 
