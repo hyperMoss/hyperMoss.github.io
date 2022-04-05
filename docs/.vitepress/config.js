@@ -45,7 +45,8 @@ function getBlogSidebar() {
         { text: "EGGJS配置Umi静态前端", link: "/blog/egg-assets-umi" },
         { text: "如果使用Webpack有OKR", link: "/blog/webpack-okr" },
         { text: 'Pixivic架构', link: '/blog/pixivic' },
-        { text: '浏览器插件开发', link: '/blog/chrome-extension' }
+        { text: '浏览器插件开发', link: '/blog/chrome-extension' },
+        { text: '年终总结', link: '/blog/2020-2021' }
       ],
     },
     {
