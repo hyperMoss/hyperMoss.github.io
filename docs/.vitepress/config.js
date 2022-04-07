@@ -46,7 +46,9 @@ function getBlogSidebar() {
         { text: "如果使用Webpack有OKR", link: "/blog/webpack-okr" },
         { text: 'Pixivic架构', link: '/blog/pixivic' },
         { text: '浏览器插件开发', link: '/blog/chrome-extension' },
-        { text: '年终总结', link: '/blog/2020-2021' }
+        { text: '年终总结', link: '/blog/2020-2021' },
+        { text: '从0到1制作一个vite插件', link: '/blog/vite-plugin' },
+
       ],
     },
     {
