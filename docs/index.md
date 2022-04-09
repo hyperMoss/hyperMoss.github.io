@@ -3,7 +3,7 @@ home: true
 heroText: HyperMoss Note
 tagline: 为学日益,为道日损
 actionText: 开始 →
-actionLink: /blog/index
+actionLink: /docs/blog/index
 features:
 - title: 《七古·残句》
   details: 自信人生二百年，会当水击三千里
