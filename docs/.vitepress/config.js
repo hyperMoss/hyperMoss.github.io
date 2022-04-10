@@ -62,7 +62,7 @@ function collectFileDir(dir, callback) {
           try {
             let data = fs.readFileSync(path.resolve(current, file), 'utf8')
             let headling = /^(\#{1})([^\#\n]+.)$/m
-            let title = headling.exec(data)[0]
+            let title = headling.exec(data)[0].replace(/^(\#)/,'')
             return { title, fileName: path.basename(file, path.extname(file)) }
           } catch (err) {
             console.error(err)
