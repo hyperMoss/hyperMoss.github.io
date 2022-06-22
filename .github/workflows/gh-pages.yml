@@ -1,0 +1,57 @@
+language: node_js
+node_js:
+  - lts/*
+install:
+  - yarn install # npm ci
+script:
+  - yarn build # npm run docs:build
+deploy:
+  provider: pages
+  skip_cleanup: true
+  local_dir: docs/.vitepress/dist
+  # A token generated on GitHub allowing Travis to push code on you repository.
+  # Set in the Travis settings page of your repository, as a secure variable.
+  github_token: $GITHUB_TOKEN
+  keep_history: true
+  on:
+    branch: main
+
+name: Vitepress Deployment
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  pages:
+      runs-on: ubuntu-20.04
+      permissions:
+        contents: write
+      steps:
+        - uses: actions/checkout@v3
+
+        - name: Setup Node
+          uses: actions/setup-node@v3
+          with:
+            node-version: '14'
+
+        - name: Get yarn cache
+          id: yarn-cache
+          run: echo "::set-output name=dir::$(yarn cache dir)"
+
+        - name: Cache dependencies
+          uses: actions/cache@v2
+          with:
+            path: ${{ steps.yarn-cache.outputs.dir }}
+            key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+            restore-keys: |
+              ${{ runner.os }}-yarn-
+
+      - run: yarn install --frozen-lockfile
+      - run: yarn build
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: docs/.vitepress/dist
