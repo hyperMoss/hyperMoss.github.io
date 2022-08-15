@@ -22,7 +22,7 @@ class EventEmitter {
   }
   emit(name, ...args) {
     if (this.event[name]) {
-      this.event[name].forEach((item) => item.apply(this, ...args));
+      this.event[name].forEach((item) => item.apply(this, args));
     }
   }
   once(name, fn) {
