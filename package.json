@@ -1,16 +1,22 @@
 {
-  "name": "gooingyu-blog",
-  "version": "1.0.0",
-  "description": "blog",
-  "main": "index.js",
-  "author": "gooingyu",
-  "license": "MIT",
-  "scripts": {
-    "dev": "vitepress dev docs",
-    "build": "vitepress build docs",
-    "serve": "vitepress serve docs"
-  },
-  "devDependencies": {
-    "vitepress": "^0.20.9"
-  }
+    "name": "gooingyu-blog",
+    "version": "1.0.0",
+    "description": "blog",
+    "main": "index.js",
+    "author": "gooingyu",
+    "license": "MIT",
+    "scripts": {
+        "generate:sidebar": "npx tsx docs/.vitepress/generate-sidebar.ts",
+        "dev": "pnpm run generate:sidebar && vitepress dev docs",
+        "build": "pnpm run generate:sidebar && vitepress build docs",
+        "serve": "vitepress serve docs",
+        "docs:dev": "vitepress dev docs",
+        "docs:build": "vitepress build docs",
+        "docs:preview": "vitepress preview docs"
+    },
+    "devDependencies": {
+        "fast-glob": "^3.3.3",
+        "gray-matter": "^4.0.3",
+        "vitepress": "2.0.0-alpha.16"
+    }
 }

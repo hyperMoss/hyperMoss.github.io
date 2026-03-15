@@ -1,0 +1,189 @@
+{
+  "/blog": [
+    {
+      "text": "interview",
+      "items": [
+        {
+          "text": "米哈游信息系统",
+          "link": "/blog/interview/mohayo"
+        },
+        {
+          "text": "虾皮IM",
+          "link": "/blog/interview/shopee2"
+        },
+        {
+          "text": "虾皮market",
+          "link": "/blog/interview/shopee1"
+        },
+        {
+          "text": "小前端的笔试题1",
+          "link": "/blog/interview/interview1"
+        },
+        {
+          "text": "正则表达式+小前端的笔试题2",
+          "link": "/blog/interview/interview2"
+        },
+        {
+          "text": "Shein",
+          "link": "/blog/interview/shein1"
+        }
+      ]
+    },
+    {
+      "text": "note",
+      "items": [
+        {
+          "text": "2020-2021年终总结",
+          "link": "/blog/note/2020-2021"
+        },
+        {
+          "text": "常见的设计模式",
+          "link": "/blog/note/useful-class"
+        },
+        {
+          "text": "从0到1制作一个vite插件",
+          "link": "/blog/note/vite-plugin"
+        },
+        {
+          "text": "关于复盘",
+          "link": "/blog/note/review"
+        },
+        {
+          "text": "剪贴板操作",
+          "link": "/blog/note/copy"
+        },
+        {
+          "text": "如果Webpack也有OKR",
+          "link": "/blog/note/webpack-okr"
+        },
+        {
+          "text": "学习方法",
+          "link": "/blog/note/how-to-learn"
+        },
+        {
+          "text": "Chrome插件开发",
+          "link": "/blog/note/chrome-extension"
+        },
+        {
+          "text": "CI/CD 工具:Travis 到 Github Action",
+          "link": "/blog/note/trivals-github-actioon"
+        },
+        {
+          "text": "eggjs 和 umi 的配置",
+          "link": "/blog/note/egg-assets-umi"
+        },
+        {
+          "text": "jenkins前端构建打包",
+          "link": "/blog/note/useful-nodejs"
+        },
+        {
+          "text": "JS 引用导致的常见问题",
+          "link": "/blog/note/js-reference"
+        },
+        {
+          "text": "JS排序算法",
+          "link": "/blog/note/js-sort"
+        },
+        {
+          "text": "nginx 变更 html 静态资源内容",
+          "link": "/blog/note/nginx-domin"
+        },
+        {
+          "text": "Pixivic架构",
+          "link": "/blog/note/pixivic"
+        },
+        {
+          "text": "vitepress 自动配置目录",
+          "link": "/blog/note/vitepress-auto-confit"
+        }
+      ]
+    },
+    {
+      "text": "source-code",
+      "items": [
+        {
+          "text": "源码阅读",
+          "link": "/blog/source-code/read-source-code"
+        }
+      ]
+    }
+  ],
+  "/study": [
+    {
+      "text": "Psychology",
+      "items": [
+        {
+          "text": "荣格八维的规则，想象与特质",
+          "link": "/study/Psychology/8-functions"
+        }
+      ]
+    },
+    {
+      "text": "data-struct",
+      "items": [
+        {
+          "text": "查找",
+          "link": "/study/data-struct/dsday5"
+        },
+        {
+          "text": "排序",
+          "link": "/study/data-struct/dsday6"
+        },
+        {
+          "text": "树",
+          "link": "/study/data-struct/dsday3"
+        },
+        {
+          "text": "顺序表",
+          "link": "/study/data-struct/dsday1"
+        },
+        {
+          "text": "图",
+          "link": "/study/data-struct/dsday4"
+        },
+        {
+          "text": "栈与队列",
+          "link": "/study/data-struct/dsday2"
+        }
+      ]
+    },
+    {
+      "text": "javascript",
+      "items": [
+        {
+          "text": "A re-introduction to JavaScript读后感(1)",
+          "link": "/study/javascript/JSintroduce-1"
+        },
+        {
+          "text": "A re-introduction to JavaScript读后感(2)",
+          "link": "/study/javascript/JSintroduce-2"
+        },
+        {
+          "text": "A re-introduction to JavaScript读后感(3)",
+          "link": "/study/javascript/JSintroduce-3"
+        }
+      ]
+    },
+    {
+      "text": "learning-how-to-learn",
+      "items": [
+        {
+          "text": "Learning how to learn part1",
+          "link": "/study/learning-how-to-learn/Learning-how-to-learn-part1"
+        },
+        {
+          "text": "Learning how to learn part2",
+          "link": "/study/learning-how-to-learn/Learning-how-to-learn-part2"
+        },
+        {
+          "text": "Learning how to learn part3",
+          "link": "/study/learning-how-to-learn/Learning-how-to-learn-part3"
+        },
+        {
+          "text": "Learning how to learn part4",
+          "link": "/study/learning-how-to-learn/Learning-how-to-learn-part4"
+        }
+      ]
+    }
+  ]
+}
