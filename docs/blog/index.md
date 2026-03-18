@@ -4,5 +4,5 @@
 
 ## 推荐文章
 
-- [Pixivic](./note/pixivic.md)
-- [如果Webpack也有OKR](./note/webpack-okr.md)
+- [Pixivic](./2020/pixivic.md)
+- [如果Webpack也有OKR](./2022/webpack-okr.md)

@@ -3,16 +3,13 @@
 layout: home
 
 hero:
-  name: 'HyperMoss'
-  text: 'HyperMoss'
+  name: 'Hello, HyperMoss👋'
+  text: '无限进步 · 终生学习者'
   tagline: 为学日益,为道日损
   actions:
     - theme: brand
       text: 博客
       link: docs/blog/
-    - theme: alt
-      text: 学习日记
-      link: docs/study/
 
 features:
   - title: 《七古·残句》

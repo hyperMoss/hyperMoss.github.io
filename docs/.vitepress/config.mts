@@ -36,14 +36,9 @@ export default defineConfig({
     nav: [
       { text: "首页", link: "/", activeMatch: "^/$|^/guide/" },
       {
-        text: "博文",
+        text: "博客",
         link: "/blog/index",
         activeMatch: "^/blog/",
-      },
-      {
-        text: "学习笔记",
-        link: "/study/index",
-        activeMatch: "^/study/",
       },
       {
         text: "Github",
