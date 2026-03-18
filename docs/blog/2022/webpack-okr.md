@@ -1,3 +1,3 @@
 # 如果Webpack也有OKR
 
-![webpack-okr](../../../public/Webpack.jpg)
+![webpack-okr](../../public/Webpack.jpg)
