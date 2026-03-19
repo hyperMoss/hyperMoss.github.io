@@ -9,7 +9,7 @@ hero:
   actions:
     - theme: brand
       text: 博客
-      link: docs/blog/
+      link: blog/
 
 features:
   - title: 《七古·残句》
