@@ -56,7 +56,7 @@ https://github.com/nexu-io/open-design/releases
 阅读 @prd.md 完成小程序开发
 ```
 
-![image](https://tvax4.sinaimg.cn/mw690/a0871c02gy1ig037xoqppj21z019m4qp.jpg)
+![image](https://lz.sinaimg.cn/mw690/a0871c02gy1ig037xoqppj21z019m4qp.jpg)
 
 这样他就会自动执行他的skills，开始设计原型
 
