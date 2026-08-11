@@ -2,11 +2,11 @@
 
 ## 什么是 GitHub Copilot
 
-![GitHub Copilot](//tvax3.sinaimg.cn/mw690/a0871c02gy1ibcn9orfekj20zk0iotgu.jpg)
+![GitHub Copilot](//lz.sinaimg.cn/mw690/a0871c02gy1ibcn9orfekj20zk0iotgu.jpg)
 
 GitHub Copilot 是由 GitHub 与 OpenAI 联合开发的 AI 编程助手，它能够理解自然语言描述，并基于当前项目上下文生成相应代码片段。Copilot 支持多语言、多框架，既可以生成简单函数，也可以辅助完成复杂逻辑。
 
-![Copilot 示例](//tvax1.sinaimg.cn/mw690/a0871c02gy1ibcnabhtdfj20k60k0qar.jpg)
+![Copilot 示例](//lz.sinaimg.cn/mw690/a0871c02gy1ibcnabhtdfj20k60k0qar.jpg)
 
 ### Copilot 的优势
 
@@ -35,7 +35,7 @@ GitHub Copilot 是由 GitHub 与 OpenAI 联合开发的 AI 编程助手，它能
 
 当遇到不太理解的代码段时，Copilot 可以给出逐行解释，帮助你快速看懂逻辑并提高可读性。
 
-![代码解释](//tvax1.sinaimg.cn/mw690/a0871c02gy1ibcnbubjlrj20pn0k0k4u.jpg)
+![代码解释](//lz.sinaimg.cn/mw690/a0871c02gy1ibcnbubjlrj20pn0k0k4u.jpg)
 
 ### 4. 自动生成测试用例
 
@@ -106,11 +106,11 @@ GitHub Copilot 是由 GitHub 与 OpenAI 联合开发的 AI 编程助手，它能
 
 指令如下：解析以下 json-schema，使用 Pinia 生成 `use-task-store`，使用 `ref` 定义，并导出定义的参数：
 
-![json-schema 示例](//tvax1.sinaimg.cn/mw690/a0871c02gy1ibcnhtn22jj20up0k0q8q.jpg)
+![json-schema 示例](//lz.sinaimg.cn/mw690/a0871c02gy1ibcnhtn22jj20up0k0q8q.jpg)
 
 将刚刚复制的 JSON 写好描述词放入 prompt 中，这种简单的体力劳动可以交给 AI 来做：
 
-![AI 生成示例](//tvax4.sinaimg.cn/mw690/a0871c02gy1ibcni98p1yj20le0k0k1n.jpg)
+![AI 生成示例](//lz.sinaimg.cn/mw690/a0871c02gy1ibcni98p1yj20le0k0k1n.jpg)
 
 ### 3. 从需求到完整项目的流程
 
