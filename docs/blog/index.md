@@ -4,6 +4,7 @@
 
 ## 推荐文章
 
+- [用 ClashBar 和 FlClash 访问 Tailscale 内网：配置与排障记录](./2026/clashbar-flclash-tailscale.md)
 - [利用codex生成微信小程序](./2026/ai-videcoding.md)
 - [在工作中使用 AI](./2025/use-ai-work.md)
 - [Pixivic](./2020/pixivic.md)

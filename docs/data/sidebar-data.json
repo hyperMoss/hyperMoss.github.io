@@ -36,6 +36,10 @@
         {
           "text": "利用codex生成微信小程序",
           "link": "/blog/2026/ai-videcoding"
+        },
+        {
+          "text": "用 ClashBar 和 FlClash 访问 Tailscale 内网：配置与排障记录",
+          "link": "/blog/2026/clashbar-flclash-tailscale"
         }
       ],
       "collapsed": false
