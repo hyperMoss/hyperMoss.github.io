@@ -125,10 +125,11 @@ function buildSidebarConfig(groupedArticles: Record<string, Record<string, Artic
       });
     }
 
-    // 按目录名称从大到小排序（支持数字排序）
-    sidebarItems.sort((a, b) =>
-      b.text.localeCompare(a.text, undefined, { numeric: true, sensitivity: 'base' })
-    );
+    // interview 放在最后，其余目录保持名称倒序。
+    sidebarItems.sort((a, b) => {
+      const interviewOrder = Number(a.text === 'interview') - Number(b.text === 'interview');
+      return interviewOrder || b.text.localeCompare(a.text, undefined, { numeric: true, sensitivity: 'base' });
+    });
 
     sidebarConfig[topLevelDir] = sidebarItems;
   }

@@ -1,36 +1,6 @@
 {
   "/blog": [
     {
-      "text": "interview",
-      "items": [
-        {
-          "text": "Shein",
-          "link": "/blog/interview/shein1"
-        },
-        {
-          "text": "小前端的笔试题1",
-          "link": "/blog/interview/interview1"
-        },
-        {
-          "text": "正则表达式+小前端的笔试题2",
-          "link": "/blog/interview/interview2"
-        },
-        {
-          "text": "米哈游信息系统",
-          "link": "/blog/interview/mohayo"
-        },
-        {
-          "text": "虾皮IM",
-          "link": "/blog/interview/shopee2"
-        },
-        {
-          "text": "虾皮market",
-          "link": "/blog/interview/shopee1"
-        }
-      ],
-      "collapsed": false
-    },
-    {
       "text": "2026",
       "items": [
         {
@@ -208,6 +178,36 @@
         {
           "text": "顺序表",
           "link": "/blog/2019/dsday1"
+        }
+      ],
+      "collapsed": false
+    },
+    {
+      "text": "interview",
+      "items": [
+        {
+          "text": "Shein",
+          "link": "/blog/interview/shein1"
+        },
+        {
+          "text": "小前端的笔试题1",
+          "link": "/blog/interview/interview1"
+        },
+        {
+          "text": "正则表达式+小前端的笔试题2",
+          "link": "/blog/interview/interview2"
+        },
+        {
+          "text": "米哈游信息系统",
+          "link": "/blog/interview/mohayo"
+        },
+        {
+          "text": "虾皮IM",
+          "link": "/blog/interview/shopee2"
+        },
+        {
+          "text": "虾皮market",
+          "link": "/blog/interview/shopee1"
         }
       ],
       "collapsed": false
