@@ -4,6 +4,10 @@
       "text": "2026",
       "items": [
         {
+          "text": "DeepSeek-R1 论文精读：GRPO、纯强化学习与推理能力蒸馏",
+          "link": "/blog/2026/deepseek-r1-rl-grpo-paper"
+        },
+        {
           "text": "Harness² 论文精读：让 AI Agent 进化自己的执行系统",
           "link": "/blog/2026/harness2-recursive-agent-harnessing"
         },
