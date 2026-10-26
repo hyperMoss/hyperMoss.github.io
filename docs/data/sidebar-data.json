@@ -4,6 +4,10 @@
       "text": "2026",
       "items": [
         {
+          "text": "Harness² 论文精读：让 AI Agent 进化自己的执行系统",
+          "link": "/blog/2026/harness2-recursive-agent-harnessing"
+        },
+        {
           "text": "利用codex生成微信小程序",
           "link": "/blog/2026/ai-videcoding"
         },
