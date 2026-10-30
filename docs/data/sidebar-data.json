@@ -18,6 +18,10 @@
         {
           "text": "用 ClashBar 和 FlClash 访问 Tailscale 内网：配置与排障记录",
           "link": "/blog/2026/clashbar-flclash-tailscale"
+        },
+        {
+          "text": "用 T3 Code 和 Mac 模拟器搭建云端 Agent 工作流的实践与排障",
+          "link": "/blog/2026/t3-cloud-agent-mac-android-workflow"
         }
       ],
       "collapsed": false

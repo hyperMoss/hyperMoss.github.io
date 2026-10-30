@@ -25,6 +25,18 @@ export default defineConfig({
   description: "Just playing.",
   base: "/",
   docsDir: "docs",
+  markdown: {
+    config(md) {
+      const defaultFence = md.renderer.rules.fence!;
+      md.renderer.rules.fence = (tokens, index, options, env, self) => {
+        const token = tokens[index];
+        if (token.info.trim() === 'mermaid') {
+          return `<MermaidDiagram code="${md.utils.escapeHtml(token.content)}" />\n`;
+        }
+        return defaultFence(tokens, index, options, env, self);
+      };
+    },
+  },
   locales: {
     "/": {
       lang: "zh-CN",

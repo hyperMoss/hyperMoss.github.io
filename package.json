@@ -17,6 +17,7 @@
     "devDependencies": {
         "fast-glob": "^3.3.3",
         "gray-matter": "^4.0.3",
+        "mermaid": "11.12.2",
         "vitepress": "2.0.0-alpha.16"
     }
 }
